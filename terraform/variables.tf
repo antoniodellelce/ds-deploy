@@ -3,7 +3,7 @@ variable "region" {
   default = "eu-west-2"
 }
 
-variable "common-id" {
+variable "common_id" {
   type    = string
   default = "demandscience"
 }
