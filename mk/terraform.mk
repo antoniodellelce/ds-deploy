@@ -46,3 +46,7 @@ destroy: terrabin
 
 have_state: terraform/terraform.tfstate
         @echo "I don't have the state file: run 'make apply'"
+
+# target to connect to instance for testing
+ssh:
+	@cd terraform && ssh -i ssh/key ec2-user@$$( $(TERRAFORM)  output  ec2_backend_ip | awk -F\" ' { print $$2 } ' )
