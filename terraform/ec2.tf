@@ -11,7 +11,7 @@ module "ec2_instance_backend" {
   vpc_security_group_ids = [module.web_server_sg.security_group_id, module.ssh_sg.security_group_id]
   subnet_id              = local.public_subnets[0]
 
-  user_data = base64encode(file("setup-ec2.sh"))
+  user_data = base64encode(file("setup-backend.sh"))
 
   tags = {
     Terraform   = "true"
