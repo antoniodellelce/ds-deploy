@@ -1,4 +1,13 @@
-# Initial readme: create resources
+# Test readme
+
+## Requirements
+
+* Linux
+* gnu make
+* wget
+* unzip
+
+terraform is also used but installed by the Makefile
 
 ## Usage
 
